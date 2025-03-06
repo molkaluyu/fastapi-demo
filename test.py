@@ -9,3 +9,7 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
+
+@app.get("/users/{user_id}")
+def read_user(user_id: int):
+    return {"user_id": user_id, "name": "测试用户", "email": "test@example.com"}
