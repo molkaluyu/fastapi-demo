@@ -13,3 +13,7 @@ def read_item(item_id: int, q: str = None):
 @app.get("/users/{user_id}")
 def read_user(user_id: int):
     return {"user_id": user_id, "name": "测试用户", "email": "test@example.com"}
+
+@app.post("/users")
+def create_user(user: User):
+    return user
